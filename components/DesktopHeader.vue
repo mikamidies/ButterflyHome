@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap">
+  <div class="wrap" id="navbar">
     <div class="container">
       <div class="left">
         <NuxtLink to="/" class="brand">
@@ -72,12 +72,35 @@ export default {
     ChevronDown,
     UzbFlag,
   },
+
+  mounted() {
+    function scrollHeader() {
+      const navbar = document.getElementById("navbar");
+      if (this.scrollY >= 50) {
+        navbar.classList.add("scroll");
+      } else {
+        navbar.classList.remove("scroll");
+      }
+    }
+    window.addEventListener("scroll", scrollHeader);
+  },
 };
 </script>
 
 <style scoped>
 .wrap {
   padding: 12px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 99;
+  transition: 0.4s;
+}
+.wrap.scroll {
+  padding: 4px;
+  border-bottom: 1px solid #ebebeb;
 }
 .container {
   display: grid;
@@ -132,6 +155,11 @@ export default {
   border: 0;
   padding: 0;
   box-shadow: none;
+  color: var(--Black, #020105);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 33.6px */
 }
 .right {
   display: flex;

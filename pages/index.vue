@@ -1,9 +1,20 @@
 <template>
-  <div class="master"></div>
+  <div class="master">
+    <HomeHero />
+    <HomeAbout />
+  </div>
 </template>
 
 <script>
-export default {};
+import HomeAbout from "~/components/HomePage/HomeAbout.vue";
+import HomeHero from "~/components/HomePage/HomeHero.vue";
+
+export default {
+  components: {
+    HomeHero,
+    HomeAbout,
+  },
+};
 </script>
 
 <style></style>

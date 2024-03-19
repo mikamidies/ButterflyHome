@@ -147,7 +147,7 @@ input:focus {
   outline: none;
 }
 .nuxt-link-exact-active {
-  color: var(--dark) !important;
+  color: var(--dark);
 }
 .marginless {
   margin: 0 !important;
