@@ -152,17 +152,6 @@ input:focus {
 .marginless {
   margin: 0 !important;
 }
-.ant-dropdown-menu-item > a,
-.ant-dropdown-menu-submenu-title > a {
-  color: white;
-}
-.ant-dropdown-menu {
-  background: var(--blue);
-}
-.ant-dropdown-menu-item:hover,
-.ant-dropdown-menu-submenu-title:hover {
-  background: #2d568b;
-}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -170,4 +159,9 @@ input::-webkit-inner-spin-button {
 }
 input[type="number"] {
   -moz-appearance: textfield;
+}
+.ant-dropdown-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
