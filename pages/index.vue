@@ -4,9 +4,7 @@
     <HomeAbout />
     <HomeOffer />
     <HomeImportant />
-
     <BlueForm />
-
     <HomeProducts />
   </div>
 </template>

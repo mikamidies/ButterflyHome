@@ -12,16 +12,13 @@
             <NuxtLink to="/"> Главная </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/"> Продукты </NuxtLink>
+            <NuxtLink to="/products"> Продукты </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/"> Услуги </NuxtLink>
+            <NuxtLink to="/about"> О нас </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/"> О нас </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/"> Контакты </NuxtLink>
+            <NuxtLink to="/contacts"> Контакты </NuxtLink>
           </li>
         </ul>
       </div>
@@ -164,5 +161,8 @@ export default {
 .right {
   display: flex;
   justify-content: flex-end;
+}
+.nuxt-link-exact-active {
+  color: #2dbe64 !important;
 }
 </style>

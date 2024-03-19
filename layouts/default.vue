@@ -12,4 +12,13 @@
 export default {};
 </script>
 
-<style></style>
+<style>
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+</style>
