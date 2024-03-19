@@ -1,0 +1,195 @@
+<template>
+  <div class="wrap">
+    <div class="container small">
+      <h4 class="title">Butterfly Home Мы - то, что нужно каждому семью</h4>
+      <div class="grid">
+        <div class="left">
+          <p class="txt">
+            Объемы загрязняющих веществ, выбрасываемых в атмосферный воздух
+            атомными станциями, намного меньше выбросов от других отраслей
+            промышленности, включая тепловую энергетику. Количественные значения
+            выбросов загрязняющих веществ при работе АЭС находятся ниже
+            установленных природоохранными органами нормативов. Основная доля
+            выбросов АЭС приходится на пускорезервные котельные и периодически
+            включаемые с целью регламентного опробования резервные
+            дизельгенераторные станции.
+          </p>
+          <p class="txt">
+            Объемы загрязняющих веществ, выбрасываемых в атмосферный воздух
+            атомными станциями, намного меньше выбросов от других отраслей
+            промышленности, включая тепловую энергетику. Количественные значения
+            выбросов загрязняющих веществ при работе АЭС находятся ниже
+            установленных природоохранными органами нормативов. Основная доля
+            выбросов АЭС приходится на пускорезервные котельные и периодически
+            включаемые с целью регламентного опробования резервные
+            дизельгенераторные станции.
+          </p>
+        </div>
+        <div class="right">
+          <p class="opacity">
+            Наша компания с 1997 года специализируется на производстве и
+            реализации, постельного белья, матрасов, подушек, одеял и другого
+            текстиля оптом. За это время нашими партнерами стали сотни
+            предприятий и организаций по всей стране.
+          </p>
+          <div class="nums">
+            <div class="item">
+              <p class="num">2016</p>
+              <p class="sub">
+                dan beri ish olib <br />
+                boramiz
+              </p>
+            </div>
+            <div class="item">
+              <p class="num">+4800</p>
+              <p class="sub">dan ortiq sotuvlar</p>
+            </div>
+          </div>
+          <NuxtLink to="/">
+            <ShopperIcon />
+            Каталог продукций
+          </NuxtLink>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="cardo">
+          <div class="img">
+            <img src="@/assets/img/logo/card-1.svg" alt="" class="icon" />
+          </div>
+          <p class="name">Tezkor yetkazib berish</p>
+        </div>
+        <div class="cardo">
+          <div class="img">
+            <img src="@/assets/img/logo/card-2.svg" alt="" class="icon" />
+          </div>
+          <p class="name">Sifat va ishonchlik</p>
+        </div>
+        <div class="cardo">
+          <div class="img">
+            <img src="@/assets/img/logo/card-3.svg" alt="" class="icon" />
+          </div>
+          <p class="name">Barcha mijozlarimiz roziligi</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import ShopperIcon from "../SvgIcons/ShopperIcon.vue";
+
+export default {
+  components: {
+    ShopperIcon,
+  },
+};
+</script>
+
+<style scoped>
+.wrap {
+  padding-bottom: 104px;
+}
+.container.small {
+  max-width: 1200px;
+}
+.title {
+  max-width: 834px;
+  margin-bottom: 32px;
+  color: var(--Black, #020105);
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 61.6px */
+}
+.grid {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 16px;
+}
+.txt {
+  color: #404058;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 33.6px */
+  margin-bottom: 40px;
+}
+.txt:last-child {
+  margin-bottom: 0;
+}
+.opacity {
+  color: #7e7e90;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  margin-bottom: 48px;
+}
+.nums {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.num {
+  color: var(--Green, #009a10);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.sub {
+  color: #7e7e90;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+}
+a {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid var(--Green, #009a10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--Green, #009a10);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 27px */
+  max-width: 284px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 56px;
+}
+.cardo {
+  border-radius: 24px;
+  background: #f4f4f7;
+  padding: 24px 24px 64px 24px;
+}
+.img {
+  width: 84px;
+  height: 84px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 24px;
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -16px;
+}
+.name {
+  color: var(--Green, #064526);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 33.6px */
+}
+</style>

@@ -1,7 +1,33 @@
-<template></template>
+<template>
+  <div class="master">
+    <SiteTop />
+    <HomeAbout />
+    <AboutCards />
+    <AboutContent />
+    <BlueForm class="form" />
+  </div>
+</template>
 
 <script>
-export default {};
+import SiteTop from "~/components/SiteTop.vue";
+import HomeAbout from "~/components/HomePage/HomeAbout.vue";
+import AboutCards from "~/components/AboutPage/AboutCards.vue";
+import BlueForm from "~/components/BlueForm.vue";
+import AboutContent from "~/components/AboutPage/AboutContent.vue";
+
+export default {
+  components: {
+    SiteTop,
+    HomeAbout,
+    AboutCards,
+    BlueForm,
+    AboutContent,
+  },
+};
 </script>
 
-<style></style>
+<style scoped>
+.form {
+  margin-bottom: 88px;
+}
+</style>
