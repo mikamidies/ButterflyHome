@@ -1,0 +1,89 @@
+<template>
+  <div class="wrap">
+    <div class="container">
+      <h4 class="section__title title">Мы предоставляем</h4>
+      <p class="sub">
+        Пошив на заказ текстильной продукции Для гостиниц и дома
+      </p>
+      <div class="items">
+        <div class="item">
+          <div class="img">
+            <img src="@/assets/img/cat-1.jpg" alt="" />
+          </div>
+          <p class="name">Постельное белье</p>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="@/assets/img/cat-2.jpg" alt="" />
+          </div>
+          <p class="name">Постельное белье</p>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="@/assets/img/cat-3.jpg" alt="" />
+          </div>
+          <p class="name">Постельное белье</p>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="@/assets/img/cat-4.jpg" alt="" />
+          </div>
+          <p class="name">Постельное белье</p>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="@/assets/img/cat-5.jpg" alt="" />
+          </div>
+          <p class="name">Постельное белье</p>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="@/assets/img/cat-6.jpg" alt="" />
+          </div>
+          <p class="name">Постельное белье</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style scoped>
+.wrap {
+  padding-bottom: 88px;
+}
+.title {
+  margin-bottom: 24px;
+}
+.sub {
+  color: #7e7e90;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 33.6px */
+  margin-bottom: 32px;
+}
+.items {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+.img img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+}
+.name {
+  color: var(--Black, #020105);
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 30px */
+  margin-top: 16px;
+  display: block;
+}
+</style>

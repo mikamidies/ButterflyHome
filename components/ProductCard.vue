@@ -1,0 +1,97 @@
+<template>
+  <div class="wrapper">
+    <NuxtLink to="/">
+      <div class="img">
+        <img src="@/assets/img/prod-1.png" alt="" />
+      </div>
+      <div class="content">
+        <p class="name">Комплект Yagona простыня на резинке</p>
+        <div class="size">
+          <span>Размеры :</span>
+          <p>160*210, 200*220</p>
+        </div>
+        <div class="link">Просмотреть <RightArrow /></div>
+      </div>
+    </NuxtLink>
+  </div>
+</template>
+
+<script>
+import RightArrow from "@/components/SvgIcons/RightArrow.vue";
+
+export default {
+  components: {
+    RightArrow,
+  },
+};
+</script>
+
+<style scoped>
+.wrapper {
+  height: 416px;
+  border-radius: 24px;
+  border: 1px solid #eff0f3;
+  overflow: hidden;
+  background: lightgray 49.726px -25.207px / 71.422% 79.617% no-repeat,
+    linear-gradient(135deg, #f4f4f7 -10.1%, #e8eaee 96.98%),
+    linear-gradient(157deg, #90df98 14.82%, #6ddb79 112.26%);
+}
+.img {
+  height: 60%;
+  background: linear-gradient(135deg, #f4f4f7 -10.1%, #e8eaee 96.98%),
+    linear-gradient(157deg, #90df98 14.82%, #6ddb79 112.26%);
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.content {
+  border-radius: 24px;
+  background: var(--White, #fff);
+  margin-top: -20px;
+  z-index: 2;
+  position: relative;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 45%;
+}
+.name {
+  color: var(--Black, #020105);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 30px */
+}
+.size {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.size span {
+  color: #7e7e90;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+}
+.size p {
+  color: var(--Black, #020105);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+}
+.link {
+  color: var(--Green, #009a10);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+</style>
