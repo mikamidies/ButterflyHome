@@ -36,7 +36,7 @@
         </div>
         <div class="lang">
           <a-dropdown>
-            <a-menu slot="overlay" @click="handleMenuClick">
+            <a-menu slot="overlay">
               <a-menu-item key="1">
                 <RuFlag />
                 <p>Ру</p>

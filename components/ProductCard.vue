@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <NuxtLink to="/">
+    <NuxtLink to="/products/_slug">
       <div class="img">
         <img src="@/assets/img/prod-1.png" alt="" />
       </div>
