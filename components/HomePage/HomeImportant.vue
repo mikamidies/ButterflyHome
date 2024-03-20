@@ -21,7 +21,7 @@
           <div class="item">
             <img src="@/assets/img/logo/butterfly.svg" alt="" class="icon" />
             <div>
-              <h4 class="title">Соблюдение сроков поставки</h4>
+              <h4 class="title">Соблюдение сроков</h4>
               <p class="sub">Соблюдение сроков поставки</p>
             </div>
           </div>
@@ -115,5 +115,56 @@ export default {};
   background: #e8eaee;
   transform: rotate(-12deg);
   z-index: 1;
+}
+@media screen and (max-width: 1024px) {
+  .cardo {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 24px;
+    border-radius: 16px;
+    gap: 36px;
+  }
+  .item {
+    padding: 12px;
+    display: inline-flex;
+    width: fit-content;
+    min-width: 250px;
+  }
+  .item:nth-child(2) {
+    margin-left: 16px;
+  }
+  .item:nth-child(3) {
+    margin-left: 32px;
+  }
+  .title {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 6px;
+  }
+  .sub {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .icon {
+    width: 22px;
+  }
+  .pic {
+    width: 260px;
+    height: 177px;
+    border-radius: 8px;
+  }
+  .img::after {
+    width: 276px;
+    height: 160px;
+    border-radius: 8px;
+    left: -24px;
+    top: 6px;
+  }
+  .wrap {
+    padding-bottom: 44px;
+  }
 }
 </style>

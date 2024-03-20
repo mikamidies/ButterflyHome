@@ -118,4 +118,50 @@ export default {
   height: 100%;
   object-fit: cover;
 }
+@media screen and (max-width: 1024px) {
+  .wrap {
+    padding: 48px 0;
+  }
+  .cardo {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+  .items {
+    gap: 8px;
+  }
+  .item {
+    gap: 4px;
+    padding: 4px 12px;
+  }
+  .item p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+  }
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+  }
+  .left {
+    gap: 8px;
+  }
+  .text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 0;
+  }
+  .right {
+    border-radius: 16px;
+  }
+}
 </style>

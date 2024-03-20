@@ -1,6 +1,6 @@
 <template>
   <div class="site">
-    <DesktopHeader />
+    <DesktopHeader class="desktop" />
     <main>
       <nuxt />
     </main>
@@ -20,5 +20,10 @@ export default {};
 }
 main {
   flex: 1;
+}
+@media screen and (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
 }
 </style>

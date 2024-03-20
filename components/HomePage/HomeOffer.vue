@@ -86,4 +86,47 @@ export default {};
   margin-top: 16px;
   display: block;
 }
+@media screen and (max-width: 1024px) {
+  .wrap {
+    overflow: hidden;
+    padding-bottom: 44px;
+  }
+  .title {
+    margin-bottom: 8px;
+  }
+  .sub {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 24px;
+  }
+  .items {
+    overflow-x: scroll;
+    margin: 0 -16px;
+    padding: 0 16px;
+  }
+  .items::-webkit-scrollbar {
+    display: none;
+  }
+
+  .items {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .item {
+    width: 144px;
+  }
+  .img img {
+    width: 144px;
+    height: 144px;
+  }
+  .name {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-top: 16px;
+  }
+}
 </style>

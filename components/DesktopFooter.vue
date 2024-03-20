@@ -212,4 +212,62 @@ export default {
   font-weight: 500;
   line-height: 140%;
 }
+a {
+  display: inline-block;
+}
+@media screen and (max-width: 1024px) {
+  .cardo {
+    padding: 20px;
+  }
+  .top {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .wrap {
+    padding-bottom: 44px;
+  }
+  .brand img {
+    width: 100px;
+    margin-bottom: 12px;
+  }
+  .num a {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin-bottom: 16px;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .links {
+    gap: 16px;
+  }
+  .links a {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+  .bottom {
+    padding-top: 16px;
+    flex-direction: column-reverse;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .bottom p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .top {
+    padding-bottom: 24px;
+  }
+}
 </style>

@@ -5,6 +5,9 @@
         <div class="back">
           <img src="@/assets/img/blue.png" alt="" />
         </div>
+        <div class="mobile__back">
+          <img src="@/assets/img/mobile-blue.png" alt="" />
+        </div>
         <div class="left">
           <h4 class="title">Связаться с нами</h4>
           <p class="sub">
@@ -165,5 +168,86 @@ button {
   width: 100%;
   border-radius: 12px;
   background: var(--White, #fff);
+}
+.mobile__back {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .wrap {
+    height: auto;
+  }
+  .cardo {
+    grid-template-columns: repeat(1, 1fr);
+    height: 360px;
+  }
+  .back {
+    display: none;
+  }
+  .mobile__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .mobile__back img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .left {
+    padding: 24px 24px 0 24px;
+  }
+  .title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 12px;
+  }
+  .sub {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 16px;
+  }
+  .num a {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+  }
+  .flex {
+    gap: 16px;
+  }
+  .socials :deep(svg) {
+    width: 24px;
+    height: 24px;
+  }
+  .inputs {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  form {
+    min-width: unset;
+    width: 100%;
+  }
+  .right {
+    padding: 0 24px 24px 24px;
+  }
+  .container {
+    height: 100%;
+  }
+  input,
+  button {
+    padding: 12px 16px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
 }
 </style>

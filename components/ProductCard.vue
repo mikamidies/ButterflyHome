@@ -94,4 +94,45 @@ export default {
   align-items: center;
   gap: 8px;
 }
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    height: 270px;
+    border-radius: 12px;
+  }
+  .content {
+    padding: 12px;
+    border-radius: 12px;
+  }
+  .name {
+    font-size: 13px;
+    font-family: var(--medium);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+  .size {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .size span {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .size p {
+    font-family: var(--medium);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+  .link {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+}
 </style>

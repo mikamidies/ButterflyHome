@@ -56,4 +56,37 @@ export default {
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
+@media screen and (max-width: 1024px) {
+  .wrap {
+    padding: 44px 0;
+    overflow: hidden;
+  }
+  .cats {
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    padding: 0 16px;
+    margin: 16px -16px 24px -16px;
+  }
+  .cats::-webkit-scrollbar {
+    display: none;
+  }
+  .cats {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .cat {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    padding: 8px 24px;
+    white-space: nowrap;
+  }
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    row-gap: 20px;
+  }
+}
 </style>
