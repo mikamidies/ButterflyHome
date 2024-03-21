@@ -6,11 +6,12 @@
           <div class="thumb" thumbSwiper="">
             <div class="swiper thumbSwiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="@/assets/img/product-1.jpg" alt="" class="pic" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="@/assets/img/product-2.jpg" alt="" class="pic" />
+                <div
+                  class="swiper-slide"
+                  v-for="thumb in product.images"
+                  :key="thumb.id"
+                >
+                  <img :src="thumb.image" alt="" class="pic" />
                 </div>
               </div>
             </div>
@@ -19,11 +20,12 @@
           <div class="main">
             <div class="swiper mainSwiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="@/assets/img/product-1.jpg" alt="" class="pic" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="@/assets/img/product-2.jpg" alt="" class="pic" />
+                <div
+                  class="swiper-slide"
+                  v-for="image in product.images"
+                  :key="image.id"
+                >
+                  <img :src="image.image" alt="" class="pic" />
                 </div>
               </div>
             </div>
@@ -31,25 +33,16 @@
         </div>
         <div class="right">
           <h4 class="title">
-            Двуспальный комплект постельного белья с покрывалом SAREV Boleno V2
-            Copper DS
+            {{ product.title }}
           </h4>
 
           <div class="specs">
             <h4>Как ухаживать</h4>
 
-            <ul>
-              <li>Простыня на резинке 160*200 см + 25 см бортик – 1 шт.</li>
-              <li>Наволочка 50*70 см (30 см запАх) – 1 шт.</li>
-              <li>Ткань: 100% хлопок</li>
-              <li>
-                Страна производитель: Узбекистан *фактический вес товара может
-                отличаться от заявленного ± 0,1кг
-              </li>
-            </ul>
+            <div v-html="product.short_desc" class="html"></div>
           </div>
 
-          <button>
+          <button @click="scrollElement('form')">
             <PhoneIcon />
             Связаться с нами
           </button>
@@ -69,7 +62,11 @@ export default {
     PhoneIcon,
   },
 
+  props: ["product"],
+
   mounted() {
+    console.log(this.product);
+
     const swiper = new Swiper(".thumbSwiper", {
       direction: "vertical",
       slidesPerView: 4,
@@ -87,6 +84,13 @@ export default {
       },
       spaceBetween: 16,
     });
+  },
+
+  methods: {
+    scrollElement(id) {
+      const element = document.getElementById(id);
+      element.scrollIntoView({ block: "start", behavior: "smooth" });
+    },
   },
 };
 </script>
@@ -132,13 +136,17 @@ ul {
   gap: 24px;
   padding-left: 24px;
 }
-li {
+.html {
   color: var(--grey-80, #353437);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
   list-style: disc;
+}
+.html :deep(p) {
+  margin-bottom: 12px;
+  display: flex;
 }
 button {
   color: var(--White, #fff);

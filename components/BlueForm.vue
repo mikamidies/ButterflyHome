@@ -30,10 +30,15 @@
           </div>
         </div>
         <div class="right">
-          <form>
+          <form @submit.prevent="onSubmit">
             <div class="inputs">
-              <input type="text" placeholder="Name" />
-              <input type="text" placeholder="Number" />
+              <input type="text" v-model="name" placeholder="Name" required />
+              <input
+                type="number"
+                v-model="number"
+                placeholder="Number"
+                required
+              />
             </div>
             <button type="submit">Отправить</button>
           </form>
@@ -48,11 +53,44 @@ import SeedVector from "./SvgIcons/SeedVector.vue";
 import TelegramIcon from "./SvgIcons/TelegramIcon.vue";
 import WhatsappIcon from "./SvgIcons/WhatsappIcon.vue";
 
+import formApi from "@/api/form";
+
 export default {
+  data() {
+    return {
+      name: "",
+      number: "",
+    };
+  },
+
   components: {
     SeedVector,
     TelegramIcon,
     WhatsappIcon,
+  },
+
+  methods: {
+    async onSubmit() {
+      const formData = {
+        name: this.name,
+        number: this.number,
+      };
+
+      const res = await formApi.sendForm(formData);
+
+      if (res && res.status === 201) {
+        this.$notification["success"]({
+          message: "Succesfully sent!",
+        });
+      } else {
+        this.$notification["error"]({
+          message: "Error!",
+        });
+      }
+
+      this.name = "";
+      this.number = "";
+    },
   },
 };
 </script>

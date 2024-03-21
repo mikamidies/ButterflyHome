@@ -312,6 +312,7 @@ export default {
     gap: 16px;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 24px;
   }
   .products .cats {
     margin: 0;

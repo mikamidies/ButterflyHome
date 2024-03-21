@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <NuxtLink to="/products/_slug">
+    <NuxtLink :to="`/products/${item.slug}`">
       <div class="img">
         <img :src="item.image?.image" alt="" />
       </div>

@@ -1,15 +1,25 @@
 <template>
   <div class="master">
     <SiteTop />
-    <ProductFace />
-    <ProductDesc />
-    <ProductSimilar />
-    <BlueForm class="form" />
+    <ProductFace :product="product" />
+    <ProductDesc :product="product" />
+    <!-- <ProductSimilar /> -->
+    <BlueForm class="form" id="form" />
   </div>
 </template>
 
 <script>
-export default {};
+import productsApi from "~/api/products";
+
+export default {
+  async asyncData({ $axios, params }) {
+    const product = await productsApi.getProduct(params.slug, $axios);
+
+    return {
+      product,
+    };
+  },
+};
 </script>
 
 <style scoped>
