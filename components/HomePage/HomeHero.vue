@@ -10,7 +10,7 @@
         </div>
 
         <div class="content">
-          <h4 class="title">Производитель текстиля для гостиниц и дома</h4>
+          <h4 class="title">{{ $store.state.translations["main.hello"] }}</h4>
 
           <div class="buttons">
             <button class="white">

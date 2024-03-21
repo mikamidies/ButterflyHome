@@ -42,10 +42,10 @@ export default {
   },
 
   i18n: {
-    locales: ["en", "ru"],
-    defaultLocale: "en",
+    locales: ["uz", "ru"],
+    defaultLocale: "ru",
     vueI18n: {
-      fallbackLocale: "en",
+      fallbackLocale: "ru",
     },
   },
 };

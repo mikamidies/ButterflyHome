@@ -38,8 +38,16 @@
           <a-dropdown>
             <a-menu slot="overlay">
               <a-menu-item key="1">
-                <RuFlag />
-                <p>Ру</p>
+                <NuxtLink :to="switchLocalePath('ru')"
+                  ><RuFlag />
+                  <p>Ру</p>
+                </NuxtLink>
+              </a-menu-item>
+              <a-menu-item key="1">
+                <NuxtLink :to="switchLocalePath('uz')"
+                  ><img src="@/assets/img/logo/uz.webp" class="flag" alt="" />
+                  <p>O'z</p>
+                </NuxtLink>
               </a-menu-item>
             </a-menu>
             <a-button style="margin-left: 8px">
