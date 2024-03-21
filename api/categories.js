@@ -8,8 +8,6 @@ export default {
           ...params,
         });
 
-        console.log(res);
-
         return res.data.results;
       }
       return res;

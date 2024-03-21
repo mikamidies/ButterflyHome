@@ -21,9 +21,7 @@
 export default {
   props: ["categories"],
 
-  mounted() {
-    console.log(this.categories);
-  },
+  mounted() {},
 };
 </script>
 

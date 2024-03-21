@@ -8,7 +8,7 @@
         <p class="name">{{ item.title }}</p>
         <div class="size">
           <span>Размеры :</span>
-          <p>160*210, 200*220</p>
+          <p>{{ item.size }}</p>
         </div>
         <div class="link">Просмотреть <RightArrow /></div>
       </div>
@@ -26,9 +26,7 @@ export default {
 
   props: ["item"],
 
-  mounted() {
-    console.log(this.item);
-  },
+  mounted() {},
 };
 </script>
 
