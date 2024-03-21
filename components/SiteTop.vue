@@ -75,6 +75,9 @@ export default {};
   line-height: normal;
 }
 @media screen and (max-width: 1024px) {
+  .wrap {
+    padding-top: 104px;
+  }
   .cardo {
     height: auto;
   }

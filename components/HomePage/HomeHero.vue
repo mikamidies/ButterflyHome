@@ -142,6 +142,9 @@ export default {
   display: none;
 }
 @media screen and (max-width: 1024px) {
+  .wrap {
+    padding-top: 104px;
+  }
   .back {
     display: none;
   }
