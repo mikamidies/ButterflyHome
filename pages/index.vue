@@ -5,7 +5,7 @@
     <HomeOffer :categories="categories" />
     <HomeImportant />
     <BlueForm />
-    <HomeProducts />
+    <HomeProducts :products="products" :categories="categories" />
   </div>
 </template>
 
@@ -18,6 +18,7 @@ import BlueForm from "~/components/BlueForm.vue";
 import HomeProducts from "~/components/HomePage/HomeProducts.vue";
 
 import categoriesApi from "@/api/categories";
+import productsApi from "@/api/products";
 
 export default {
   components: {
@@ -31,9 +32,11 @@ export default {
 
   async asyncData({ $axios }) {
     const categories = await categoriesApi.getCategories($axios);
+    const products = await productsApi.getProducts($axios);
 
     return {
       categories,
+      products,
     };
   },
 };

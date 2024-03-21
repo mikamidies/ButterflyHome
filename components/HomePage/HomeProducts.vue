@@ -3,17 +3,12 @@
     <div class="container">
       <h4 class="section__title">Наша продукция</h4>
       <div class="cats">
-        <button class="cat">Постельное белье</button>
-        <button class="cat">Покрывала</button>
-        <button class="cat">Подушки</button>
-        <button class="cat">Для гостиниц</button>
+        <button class="cat" v-for="cat in categories" :key="cat.id">
+          {{ cat.title }}
+        </button>
       </div>
       <div class="items">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductCard v-for="item in products" :key="item.id" :item="item" />
       </div>
     </div>
   </div>
@@ -26,6 +21,8 @@ export default {
   components: {
     ProductCard,
   },
+
+  props: ["products", "categories"],
 };
 </script>
 

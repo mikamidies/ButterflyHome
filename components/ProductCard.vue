@@ -2,10 +2,10 @@
   <div class="wrapper">
     <NuxtLink to="/products/_slug">
       <div class="img">
-        <img src="@/assets/img/prod-1.png" alt="" />
+        <img :src="item.image?.image" alt="" />
       </div>
       <div class="content">
-        <p class="name">Комплект Yagona простыня на резинке</p>
+        <p class="name">{{ item.title }}</p>
         <div class="size">
           <span>Размеры :</span>
           <p>160*210, 200*220</p>
@@ -22,6 +22,12 @@ import RightArrow from "@/components/SvgIcons/RightArrow.vue";
 export default {
   components: {
     RightArrow,
+  },
+
+  props: ["item"],
+
+  mounted() {
+    console.log(this.item);
   },
 };
 </script>
