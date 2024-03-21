@@ -254,4 +254,95 @@ iframe {
 .form {
   margin-bottom: 80px;
 }
+@media screen and (max-width: 1024px) {
+  .top {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+  }
+  .title {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .item a,
+  .item p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+  }
+  .sate {
+    padding: 16px;
+  }
+  .par {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+  .cardo {
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  .soc span,
+  .soc p {
+    font-size: 12px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 150% !important;
+  }
+  .soc :deep(svg) {
+    width: 20px;
+    height: 20px;
+  }
+  .num {
+    gap: 8px;
+  }
+  .num a {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+  }
+  .num :deep(svg) {
+    width: 18px;
+    height: 18px;
+  }
+  .mid {
+    border-radius: 16px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 48px;
+  }
+  .img {
+    display: flex;
+    justify-content: center;
+  }
+  .ute img {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+  }
+  .img::after {
+    width: 300px;
+    height: 200px;
+    top: 50px;
+    left: 16px;
+    border-radius: 8px;
+  }
+  .top {
+    padding: 44px 0;
+  }
+  .iframe,
+  .form {
+    margin-bottom: 44px;
+  }
+  .iframe iframe {
+    height: 400px;
+    border-radius: 24px;
+  }
+}
 </style>

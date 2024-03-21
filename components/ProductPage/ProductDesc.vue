@@ -83,4 +83,28 @@ li {
   font-weight: 400;
   line-height: 150%; /* 27px */
 }
+@media screen and (max-width: 1024px) {
+  .html {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .specs h4 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 8px;
+  }
+  ul {
+    gap: 16px;
+  }
+  li {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
 </style>

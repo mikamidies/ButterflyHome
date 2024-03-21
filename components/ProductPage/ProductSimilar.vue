@@ -37,8 +37,14 @@ export default {
 
   mounted() {
     new Swiper(".similarSwiper", {
-      spaceBetween: 16,
-      slidesPerView: 4,
+      spaceBetween: 8,
+      slidesPerView: 2,
+      breakpoints: {
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 16,
+        },
+      },
     });
   },
 };
@@ -78,5 +84,27 @@ export default {
 }
 .prev :deep(svg) {
   transform: rotate(90deg);
+}
+@media screen and (max-width: 1024px) {
+  .wrap {
+    position: relative;
+    padding-top: 44px;
+  }
+  .header {
+    margin-bottom: 24px;
+  }
+  .buttons {
+    position: absolute;
+    top: 60%;
+    left: 0px;
+    z-index: 9;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .prev,
+  .next {
+    width: 32px;
+    height: 32px;
+  }
 }
 </style>

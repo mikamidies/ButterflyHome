@@ -33,4 +33,12 @@ export default {
 .form {
   padding-bottom: 88px;
 }
+@media screen and (max-width: 1024px) {
+  .form {
+    padding-bottom: 44px;
+  }
+  .categories {
+    padding-top: 44px;
+  }
+}
 </style>

@@ -73,7 +73,13 @@ export default {
     const swiper = new Swiper(".thumbSwiper", {
       direction: "vertical",
       slidesPerView: 4,
-      spaceBetween: 16,
+      spaceBetween: 8,
+      breakpoints: {
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 16,
+        },
+      },
     });
     new Swiper(".mainSwiper", {
       thumbs: {
@@ -172,5 +178,62 @@ button {
 }
 :deep(.swiper-slide-thumb-active) {
   border: 2px solid #009a10;
+}
+@media screen and (max-width: 1024px) {
+  .left {
+    gap: 8px;
+  }
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 44px 0;
+  }
+  .thumbSwiper,
+  .mainSwiper {
+    height: 260px;
+  }
+  .mainSwiper,
+  .mainSwiper img {
+    border-radius: 16px;
+  }
+  .thumbSwiper,
+  .thumbSwiper img,
+  .thumbSwiper .swiper-slide {
+    border-radius: 8px;
+  }
+  .title {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 16px;
+  }
+  .specs h4 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 8px;
+  }
+  ul {
+    gap: 16px;
+  }
+  li {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .specs {
+    margin-bottom: 16px;
+  }
+  button {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    justify-content: center;
+  }
 }
 </style>

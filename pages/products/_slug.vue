@@ -16,4 +16,9 @@ export default {};
 .form {
   padding: 88px 0;
 }
+@media screen and (max-width: 1024px) {
+  .form {
+    padding: 44px 0;
+  }
+}
 </style>

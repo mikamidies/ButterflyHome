@@ -74,4 +74,25 @@ export default {};
   font-weight: 600;
   line-height: normal;
 }
+@media screen and (max-width: 1024px) {
+  .cardo {
+    height: auto;
+  }
+  .content {
+    padding: 24px;
+  }
+  .title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .crumbs a,
+  .crumbs p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+}
 </style>

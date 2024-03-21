@@ -192,4 +192,74 @@ a {
   font-weight: 500;
   line-height: 140%; /* 33.6px */
 }
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    margin-bottom: 12px;
+  }
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .txt {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 12px;
+  }
+  .opacity {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 24px;
+  }
+  .num {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .sub {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .nums {
+    margin-bottom: 24px;
+  }
+  a {
+    max-width: unset;
+    width: 100%;
+    padding: 12px 24px;
+    justify-content: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .cardo {
+    border-radius: 24px;
+    background: #f4f4f7;
+    padding: 24px 16px 24px 24px;
+  }
+  .name {
+    font-family: var(--medium);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+  }
+  .wrap {
+    padding-bottom: 44px;
+  }
+}
 </style>

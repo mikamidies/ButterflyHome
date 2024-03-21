@@ -75,6 +75,7 @@ export default {};
   width: 100%;
   height: 100%;
   z-index: 1;
+  object-fit: cover;
 }
 .content {
   position: relative;
@@ -89,5 +90,31 @@ export default {};
   font-style: normal;
   font-weight: 600;
   line-height: 140%; /* 33.6px */
+}
+@media screen and (max-width: 1024px) {
+  .wrap {
+    padding-bottom: 44px;
+  }
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .item {
+    height: 316px;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .brand {
+    margin-bottom: 8px;
+  }
+  .brand img {
+    width: 44px;
+  }
+  .name {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+  }
 }
 </style>

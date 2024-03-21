@@ -30,4 +30,9 @@ export default {
 .form {
   margin-bottom: 88px;
 }
+@media screen and (max-width: 1024px) {
+  .form {
+    margin-bottom: 44px;
+  }
+}
 </style>

@@ -194,7 +194,7 @@ button {
   .mobile__back img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
   .left {
     padding: 24px 24px 0 24px;
@@ -248,6 +248,13 @@ button {
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+  }
+}
+@media screen and (max-width: 370px) {
+  .mobile__back img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 </style>
