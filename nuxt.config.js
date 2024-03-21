@@ -24,7 +24,7 @@ export default {
   modules: ["@nuxtjs/axios"],
 
   axios: {
-    baseURL: "/",
+    baseURL: process.env.BASE_URL || "https://textil.pythonanywhere.com/api",
   },
 
   build: {

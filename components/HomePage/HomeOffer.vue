@@ -6,41 +6,11 @@
         Пошив на заказ текстильной продукции Для гостиниц и дома
       </p>
       <div class="items">
-        <div class="item">
+        <div class="item" v-for="item in categories" :key="item.id">
           <div class="img">
-            <img src="@/assets/img/cat-1.jpg" alt="" />
+            <img :src="item.image" alt="" />
           </div>
-          <p class="name">Постельное белье</p>
-        </div>
-        <div class="item">
-          <div class="img">
-            <img src="@/assets/img/cat-2.jpg" alt="" />
-          </div>
-          <p class="name">Постельное белье</p>
-        </div>
-        <div class="item">
-          <div class="img">
-            <img src="@/assets/img/cat-3.jpg" alt="" />
-          </div>
-          <p class="name">Постельное белье</p>
-        </div>
-        <div class="item">
-          <div class="img">
-            <img src="@/assets/img/cat-4.jpg" alt="" />
-          </div>
-          <p class="name">Постельное белье</p>
-        </div>
-        <div class="item">
-          <div class="img">
-            <img src="@/assets/img/cat-5.jpg" alt="" />
-          </div>
-          <p class="name">Постельное белье</p>
-        </div>
-        <div class="item">
-          <div class="img">
-            <img src="@/assets/img/cat-6.jpg" alt="" />
-          </div>
-          <p class="name">Постельное белье</p>
+          <p class="name">{{ item.title }}</p>
         </div>
       </div>
     </div>
@@ -48,7 +18,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["categories"],
+
+  mounted() {
+    console.log(this.categories);
+  },
+};
 </script>
 
 <style scoped>
@@ -75,6 +51,8 @@ export default {};
   width: 220px;
   height: 220px;
   object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #7e7e90;
 }
 .name {
   color: var(--Black, #020105);
