@@ -2,13 +2,13 @@
   <div class="wrap" id="mobile">
     <div class="container">
       <div class="left">
-        <NuxtLink to="/" class="brand">
+        <NuxtLink :to="localePath('/')" class="brand">
           <img src="@/assets/img/logo/brand.svg" alt="" />
         </NuxtLink>
       </div>
       <div class="right">
         <div class="num">
-          <a href="+971 52 246 40 48">+971 52 246 40 48</a>
+          <a :href="`tel:${info.nbm}`">{{ info.nbm }}</a>
         </div>
         <div
           class="burger"
@@ -25,23 +25,29 @@
         <div class="top">
           <ul class="links">
             <li>
-              <NuxtLink to="/"> Главная </NuxtLink>
+              <NuxtLink :to="localePath('/')"> Главная </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/products"> Продукты </NuxtLink>
+              <NuxtLink :to="localePath('/products')"> Продукты </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/about"> О нас </NuxtLink>
+              <NuxtLink :to="localePath('/about')"> О нас </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/contacts"> Контакты </NuxtLink>
+              <NuxtLink :to="localePath('/contacts')"> Контакты </NuxtLink>
             </li>
           </ul>
         </div>
         <div class="bottom">
           <div class="langs">
-            <button>Русский</button>
-            <button>O'zbekcha</button>
+            <NuxtLink :to="switchLocalePath('ru')"
+              ><RuFlag />
+              <p>Ру</p>
+            </NuxtLink>
+            <NuxtLink :to="switchLocalePath('uz')"
+              ><img src="@/assets/img/logo/uz.webp" class="flag" alt="" />
+              <p>O'z</p>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -50,10 +56,18 @@
 </template>
 
 <script>
+import RuFlag from "./SvgIcons/RuFlag.vue";
+import infoApi from "@/api/info";
+
 export default {
+  components: {
+    RuFlag,
+  },
+
   data() {
     return {
       menuHandle: false,
+      info: "",
     };
   },
 
@@ -63,7 +77,11 @@ export default {
     },
   },
 
-  mounted() {
+  async mounted() {
+    const infoData = await infoApi.getInfos(this.$axios);
+
+    this.info = infoData.data;
+
     function scrollHeader() {
       const navbar = document.getElementById("mobile");
       if (this.scrollY >= 50) {
@@ -192,12 +210,20 @@ export default {
   justify-content: space-between;
   width: 100%;
 }
-.langs button {
+.langs a {
   color: var(--Black, #020105);
   font-size: 18px;
   font-style: normal;
   line-height: 150%;
   display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.langs svg,
+.langs img {
+  width: 32px;
+  height: 24px;
+  object-fit: cover;
 }
 .nuxt-link-exact-active {
   color: #2dbe64 !important;

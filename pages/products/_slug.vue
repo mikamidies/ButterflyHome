@@ -4,7 +4,7 @@
     <ProductFace :product="product" />
     <ProductDesc :product="product" />
     <!-- <ProductSimilar /> -->
-    <BlueForm class="form" id="form" />
+    <BlueForm class="form" />
   </div>
 </template>
 
@@ -12,8 +12,13 @@
 import productsApi from "~/api/products";
 
 export default {
-  async asyncData({ $axios, params }) {
-    const product = await productsApi.getProduct(params.slug, $axios);
+  async asyncData({ $axios, params, query, i18n }) {
+    const product = await productsApi.getProduct(params.slug, $axios, {
+      params: query,
+      headers: {
+        language: i18n.locale,
+      },
+    });
 
     return {
       product,

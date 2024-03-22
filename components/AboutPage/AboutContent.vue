@@ -45,7 +45,7 @@
               <p class="sub">dan ortiq sotuvlar</p>
             </div>
           </div>
-          <NuxtLink to="/">
+          <NuxtLink :to="localePath('/products')">
             <ShopperIcon />
             Каталог продукций
           </NuxtLink>

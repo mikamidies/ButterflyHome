@@ -13,11 +13,11 @@
           <h4 class="title">{{ $store.state.translations["main.hello"] }}</h4>
 
           <div class="buttons">
-            <button class="white">
+            <NuxtLink class="white" :to="localePath('/products')">
               <ShooperIcon />
               Каталог продукций
-            </button>
-            <button class="green">
+            </NuxtLink>
+            <button class="green" @click="scrollElement('anchor')">
               <PhoneIcon />
               Связаться с нами
             </button>
@@ -28,11 +28,11 @@
       </div>
 
       <div class="mobile__buttons">
-        <button class="mobile__white">
+        <NuxtLink class="mobile__white" :to="localePath('/products')">
           <ShooperIcon />
           Каталог продукций
-        </button>
-        <button class="mobile__green">
+        </NuxtLink>
+        <button class="mobile__green" @click="scrollElement('anchor')">
           <PhoneIcon />
           Связаться с нами
         </button>
@@ -49,6 +49,19 @@ export default {
   components: {
     PhoneIcon,
     ShooperIcon,
+  },
+
+  methods: {
+    scrollElement(id) {
+      const element = document.getElementById(id);
+      const elementPosition = element.offsetTop;
+
+      element.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+        top: elementPosition + 1000,
+      });
+    },
   },
 };
 </script>

@@ -87,9 +87,19 @@ export default {
     SiteTop,
   },
 
-  async asyncData({ $axios }) {
-    const categories = await categoriesApi.getCategories($axios);
-    const products = await productsApi.getProducts($axios);
+  async asyncData({ $axios, query, i18n }) {
+    const categories = await categoriesApi.getCategories($axios, {
+      params: query,
+      headers: {
+        language: i18n.locale,
+      },
+    });
+    const products = await productsApi.getProducts($axios, {
+      params: query,
+      headers: {
+        language: i18n.locale,
+      },
+    });
 
     return {
       categories,

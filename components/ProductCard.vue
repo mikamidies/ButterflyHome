@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <NuxtLink :to="`/products/${item.slug}`">
+    <NuxtLink :to="localePath(`/products/${item.slug}`)">
       <div class="img">
         <img :src="item.image?.image" alt="" />
       </div>

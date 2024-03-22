@@ -42,7 +42,7 @@
             <div v-html="product.short_desc" class="html"></div>
           </div>
 
-          <button @click="scrollElement('form')">
+          <button @click="scrollElement('anchor')">
             <PhoneIcon />
             Связаться с нами
           </button>
@@ -89,7 +89,13 @@ export default {
   methods: {
     scrollElement(id) {
       const element = document.getElementById(id);
-      element.scrollIntoView({ block: "start", behavior: "smooth" });
+      const elementPosition = element.offsetTop;
+
+      element.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+        top: elementPosition + 1000,
+      });
     },
   },
 };

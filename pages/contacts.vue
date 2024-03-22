@@ -16,7 +16,7 @@
             <div class="icon">
               <PhoneIcon />
             </div>
-            <a href="#"> +971 52 246 40 48 </a>
+            <a :href="`tel:${info.nbm}`">{{ info.nbm }}</a>
           </div>
           <div class="item">
             <div class="icon">
@@ -28,7 +28,7 @@
             <div class="icon">
               <EmailIcon />
             </div>
-            <a href="#">butterflyhome@info.com</a>
+            <a :href="`mailto:${info.email}`">{{ info.email }}</a>
           </div>
         </div>
       </div>
@@ -37,18 +37,18 @@
         <div class="sate">
           <p class="par">Связаться с нами в соцсетях</p>
           <div class="cardo">
-            <a href="#" class="soc">
+            <a :href="`tel:${info.telegram}`" class="soc">
               <span> <TelegramIcon />Telegram: </span>
-              <p>t.me/ButterflyHome</p>
+              <p>{{ info.telegram }}</p>
             </a>
-            <a href="#" class="soc">
+            <a :href="`tel:${info.instagram}`" class="soc">
               <span> <WhatsappIcon />Whatsapp: </span>
-              <p>+1 813 333 88 99</p>
+              <p>{{ info.nbm }}</p>
             </a>
           </div>
           <div class="num">
             <PhoneIcon />
-            <a href="#"> +971 52 246 40 48 </a>
+            <a :href="`tel:${info.nbm}`">{{ info.nbm }}</a>
           </div>
         </div>
         <div class="ute">
@@ -82,6 +82,8 @@ import EmailIcon from "@/components/SvgIcons/EmailIcon.vue";
 import TelegramIcon from "@/components/SvgIcons/TelegramIcon.vue";
 import WhatsappIcon from "@/components/SvgIcons/WhatsappIcon.vue";
 
+import infoApi from "@/api/info";
+
 export default {
   components: {
     PhoneIcon,
@@ -89,6 +91,18 @@ export default {
     EmailIcon,
     TelegramIcon,
     WhatsappIcon,
+  },
+
+  data() {
+    return {
+      info: "",
+    };
+  },
+
+  async mounted() {
+    const infoData = await infoApi.getInfos(this.$axios);
+
+    this.info = infoData.data;
   },
 };
 </script>

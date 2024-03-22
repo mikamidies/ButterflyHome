@@ -6,7 +6,7 @@
         <div class="content">
           <ol class="crumbs">
             <li>
-              <NuxtLink to="/"> Home </NuxtLink>
+              <NuxtLink :to="localePath('/')"> Home </NuxtLink>
             </li>
             \
             <li>

@@ -1,5 +1,7 @@
 <template>
   <div class="wrap">
+    <div id="anchor" class="hidden__element"></div>
+
     <div class="container">
       <div class="cardo">
         <div class="back">
@@ -16,14 +18,14 @@
           </p>
           <div class="flex">
             <div class="num">
-              <a href="#"> +971 52 246 40 48 </a>
+              <a :href="`tel:${info.nbm}`">{{ info.nbm }}</a>
             </div>
             <div class="stick"></div>
             <div class="socials">
-              <a href="#">
+              <a :href="`tel:${info.telegram}`">
                 <TelegramIcon />
               </a>
-              <a href="#">
+              <a :href="`tel:${info.instagram}`">
                 <WhatsappIcon />
               </a>
             </div>
@@ -54,12 +56,14 @@ import TelegramIcon from "./SvgIcons/TelegramIcon.vue";
 import WhatsappIcon from "./SvgIcons/WhatsappIcon.vue";
 
 import formApi from "@/api/form";
+import infoApi from "@/api/info";
 
 export default {
   data() {
     return {
       name: "",
       number: "",
+      info: "",
     };
   },
 
@@ -67,6 +71,12 @@ export default {
     SeedVector,
     TelegramIcon,
     WhatsappIcon,
+  },
+
+  async mounted() {
+    const infoData = await infoApi.getInfos(this.$axios);
+
+    this.info = infoData.data;
   },
 
   methods: {
@@ -98,6 +108,10 @@ export default {
 <style scoped>
 .wrap {
   position: relative;
+}
+#anchor {
+  position: absolute;
+  top: -100px;
 }
 .cardo {
   height: 406px;

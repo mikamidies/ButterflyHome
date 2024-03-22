@@ -5,20 +5,20 @@
         <div class="top">
           <div class="left">
             <div class="brand">
-              <NuxtLink to="/">
+              <NuxtLink :to="localePath('/')">
                 <img src="@/assets/img/logo/brand.svg" alt="" />
               </NuxtLink>
             </div>
             <div class="num">
-              <a href="#"> +971 52 246 40 48 </a>
+              <a :href="`tel:${info.nbm}`">{{ info.nbm }}</a>
             </div>
 
             <div class="buttons">
-              <button class="white">
+              <NuxtLink class="white" :to="localePath('/products')">
                 <ShooperIcon />
                 Каталог продукций
-              </button>
-              <button class="green">
+              </NuxtLink>
+              <button class="green" @click="scrollElement('anchor')">
                 <PhoneIcon />
                 Связаться с нами
               </button>
@@ -27,27 +27,27 @@
           <div class="right">
             <ul class="links">
               <li>
-                <NuxtLink to="/"> Главная </NuxtLink>
+                <NuxtLink :to="localePath('/')"> Главная </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/"> Продукты </NuxtLink>
+                <NuxtLink :to="localePath('/products')"> Продукты </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/"> Услуги </NuxtLink>
+                <NuxtLink :to="localePath('/services')"> Услуги </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/"> О нас </NuxtLink>
+                <NuxtLink :to="localePath('/about')"> О нас </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/"> Контакты </NuxtLink>
+                <NuxtLink :to="localePath('/contacts')"> Контакты </NuxtLink>
               </li>
             </ul>
 
             <div class="socials">
-              <a href="#">
+              <a :href="`tel:${info.telegram}`">
                 <TelegramIcon />
               </a>
-              <a href="#">
+              <a :href="`tel:${info.instagram}`">
                 <WhatsappIcon />
               </a>
             </div>
@@ -57,7 +57,9 @@
         <div class="bottom">
           <p>Copyright © 2024 Butterfly Home Collection</p>
 
-          <p class="by">by <a href="#"> NDC </a></p>
+          <p class="by">
+            by <a href="https://ndc.uz/" target="_blank"> NDC </a>
+          </p>
         </div>
       </div>
     </div>
@@ -70,12 +72,39 @@ import PhoneIcon from "@/components/SvgIcons/PhoneIcon.vue";
 import TelegramIcon from "./SvgIcons/TelegramIcon.vue";
 import WhatsappIcon from "./SvgIcons/WhatsappIcon.vue";
 
+import infoApi from "@/api/info";
+
 export default {
   components: {
     PhoneIcon,
     ShooperIcon,
     TelegramIcon,
     WhatsappIcon,
+  },
+
+  data() {
+    return {
+      info: "",
+    };
+  },
+
+  async mounted() {
+    const infoData = await infoApi.getInfos(this.$axios);
+
+    this.info = infoData.data;
+  },
+
+  methods: {
+    scrollElement(id) {
+      const element = document.getElementById(id);
+      const elementPosition = element.offsetTop;
+
+      element.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+        top: elementPosition + 1000,
+      });
+    },
   },
 };
 </script>
