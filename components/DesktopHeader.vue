@@ -9,16 +9,24 @@
       <div class="mid">
         <ul class="links">
           <li>
-            <NuxtLink :to="localePath('/')"> Главная </NuxtLink>
+            <NuxtLink :to="localePath('/')">
+              {{ $store.state.translations["main.layout-1"] }}
+            </NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/products')"> Продукты </NuxtLink>
+            <NuxtLink :to="localePath('/products')">
+              {{ $store.state.translations["main.layout-2"] }}
+            </NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/about')"> О нас </NuxtLink>
+            <NuxtLink :to="localePath('/about')"
+              >{{ $store.state.translations["main.layout-4"] }}
+            </NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/contacts')"> Контакты </NuxtLink>
+            <NuxtLink :to="localePath('/contacts')">
+              {{ $store.state.translations["main.layout-5"] }}
+            </NuxtLink>
           </li>
         </ul>
       </div>
@@ -50,9 +58,9 @@
                 </NuxtLink>
               </a-menu-item>
             </a-menu>
-            <a-button style="margin-left: 8px">
-              <RuFlag />
-              <p>Ру</p>
+            <a-button style="margin-left: 8px; text-transform: capitalize">
+              <LangIcon />
+              <p>{{ $i18n.locale }}</p>
               <ChevronDown />
             </a-button>
           </a-dropdown>
@@ -68,6 +76,7 @@ import UzbFlag from "./SvgIcons/UzbFlag.vue";
 import ChevronDown from "./SvgIcons/ChevronDown.vue";
 import TelegramIcon from "./SvgIcons/TelegramIcon.vue";
 import WhatsappIcon from "./SvgIcons/WhatsappIcon.vue";
+import LangIcon from "@/components/SvgIcons/Langicon.vue";
 
 import infoApi from "@/api/info";
 
@@ -78,6 +87,7 @@ export default {
     RuFlag,
     ChevronDown,
     UzbFlag,
+    LangIcon,
   },
 
   data() {

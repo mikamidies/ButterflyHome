@@ -1,28 +1,36 @@
 <template>
   <div class="wrap">
     <div class="container">
-      <h4 class="section__title">Нам важно</h4>
+      <h4 class="section__title">
+        {{ $store.state.translations["main.imp-1"] }}
+      </h4>
       <div class="cardo">
         <div class="left">
           <div class="item">
             <img src="@/assets/img/logo/butterfly.svg" alt="" class="icon" />
             <div>
-              <h4 class="title">Соблюдение сроков поставки</h4>
-              <p class="sub">Соблюдение сроков поставки</p>
+              <h4 class="title">
+                {{ $store.state.translations["main.imp-2"] }}
+              </h4>
+              <p class="sub">{{ $store.state.translations["main.imp-3"] }}</p>
             </div>
           </div>
           <div class="item">
             <img src="@/assets/img/logo/butterfly.svg" alt="" class="icon" />
             <div>
-              <h4 class="title">Соблюдение сроков поставки</h4>
-              <p class="sub">Соблюдение сроков поставки</p>
+              <h4 class="title">
+                {{ $store.state.translations["main.imp-4"] }}
+              </h4>
+              <p class="sub">{{ $store.state.translations["main.imp-5"] }}</p>
             </div>
           </div>
           <div class="item">
             <img src="@/assets/img/logo/butterfly.svg" alt="" class="icon" />
             <div>
-              <h4 class="title">Соблюдение сроков</h4>
-              <p class="sub">Соблюдение сроков поставки</p>
+              <h4 class="title">
+                {{ $store.state.translations["main.imp-6"] }}
+              </h4>
+              <p class="sub">{{ $store.state.translations["main.imp-7"] }}</p>
             </div>
           </div>
         </div>

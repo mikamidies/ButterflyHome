@@ -6,25 +6,22 @@
           <div class="cardo">
             <UprightArrow class="arrow" />
             <h4 class="title">
-              Butterfly Home Мы - то, что нужно каждому семью
+              {{ $store.state.translations["main.about-1"] }}
             </h4>
             <div class="items">
               <div class="item">
-                <p>15</p>
-                <p>лет на рынке</p>
+                <p>{{ $store.state.translations["main.about-2"] }}</p>
+                <p>{{ $store.state.translations["main.about-3"] }}</p>
               </div>
               <div class="item">
-                <p>40+</p>
-                <p>Сотрудников</p>
+                <p>{{ $store.state.translations["main.about-4"] }}</p>
+                <p>{{ $store.state.translations["main.about-5"] }}</p>
               </div>
             </div>
           </div>
           <div class="cardo">
             <p class="text">
-              Наша компания с 1997 года специализируется на производстве и
-              реализации, постельного белья, матрасов, подушек, одеял и другого
-              текстиля оптом. За это время нашими партнерами стали сотни
-              предприятий и организаций по всей стране.
+              {{ $store.state.translations["main.about-6"] }}
             </p>
           </div>
         </div>

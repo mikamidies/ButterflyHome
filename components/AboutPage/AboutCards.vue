@@ -8,7 +8,7 @@
             <div class="brand">
               <img src="@/assets/img/logo/brand-yellow.svg" alt="" />
             </div>
-            <p class="name">Комплект Yagona простыня на резинке</p>
+            <p class="name">{{ $store.state.translations["about.card-1"] }}</p>
           </div>
         </div>
         <div class="item">
@@ -17,7 +17,7 @@
             <div class="brand">
               <img src="@/assets/img/logo/brand-yellow.svg" alt="" />
             </div>
-            <p class="name">Комплект Yagona простыня на резинке</p>
+            <p class="name">{{ $store.state.translations["about.card-2"] }}</p>
           </div>
         </div>
         <div class="item">
@@ -26,7 +26,7 @@
             <div class="brand">
               <img src="@/assets/img/logo/brand-yellow.svg" alt="" />
             </div>
-            <p class="name">Комплект Yagona простыня на резинке</p>
+            <p class="name">{{ $store.state.translations["about.card-3"] }}</p>
           </div>
         </div>
         <div class="item">
@@ -35,7 +35,7 @@
             <div class="brand">
               <img src="@/assets/img/logo/brand-yellow.svg" alt="" />
             </div>
-            <p class="name">Комплект Yagona простыня на резинке</p>
+            <p class="name">{{ $store.state.translations["about.card-4"] }}</p>
           </div>
         </div>
       </div>

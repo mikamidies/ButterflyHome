@@ -1,9 +1,11 @@
 <template>
   <div class="wrap">
     <div class="container">
-      <h4 class="section__title title">Мы предоставляем</h4>
+      <h4 class="section__title title">
+        {{ $store.state.translations["main.offer-1"] }}
+      </h4>
       <p class="sub">
-        Пошив на заказ текстильной продукции Для гостиниц и дома
+        {{ $store.state.translations["main.offer-2"] }}
       </p>
       <div class="items">
         <div class="item" v-for="item in categories" :key="item.id">

@@ -1,13 +1,13 @@
 <template>
   <div class="master">
-    <SiteTop />
+    <SiteTop :current="$store.state.translations['main.layout-5']" />
 
     <div class="container">
       <div class="top">
         <div class="left">
           <h4 class="title">
-            Мы Любим <br />
-            Общаться
+            {{ $store.state.translations["inner.love"] }} <br />
+            {{ $store.state.translations["inner.talk"] }}
             <img src="@/assets/img/logo/hearth.svg" alt="" />
           </h4>
         </div>
@@ -22,7 +22,7 @@
             <div class="icon">
               <LocationIcon />
             </div>
-            <p>улица Олмазор, 2А, Ташкент</p>
+            <p>{{ info.adres }}</p>
           </div>
           <div class="item">
             <div class="icon">
@@ -35,7 +35,7 @@
 
       <div class="mid">
         <div class="sate">
-          <p class="par">Связаться с нами в соцсетях</p>
+          <p class="par">{{ $store.state.translations["inner.socials"] }}</p>
           <div class="cardo">
             <a :href="`tel:${info.telegram}`" class="soc">
               <span> <TelegramIcon />Telegram: </span>

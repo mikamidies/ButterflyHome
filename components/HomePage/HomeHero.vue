@@ -10,31 +10,31 @@
         </div>
 
         <div class="content">
-          <h4 class="title">{{ $store.state.translations["main.hello"] }}</h4>
+          <h4 class="title">{{ $store.state.translations["main.hero-1"] }}</h4>
 
           <div class="buttons">
             <NuxtLink class="white" :to="localePath('/products')">
               <ShooperIcon />
-              Каталог продукций
+              {{ $store.state.translations["main.catalog"] }}
             </NuxtLink>
             <button class="green" @click="scrollElement('anchor')">
               <PhoneIcon />
-              Связаться с нами
+              {{ $store.state.translations["main.contact-us"] }}
             </button>
           </div>
 
-          <p class="sub">Мы рады видеть вас в числе партнеров!</p>
+          <p class="sub">{{ $store.state.translations["main.hero-2"] }}</p>
         </div>
       </div>
 
       <div class="mobile__buttons">
         <NuxtLink class="mobile__white" :to="localePath('/products')">
           <ShooperIcon />
-          Каталог продукций
+          {{ $store.state.translations["main.catalog"] }}
         </NuxtLink>
         <button class="mobile__green" @click="scrollElement('anchor')">
           <PhoneIcon />
-          Связаться с нами
+          {{ $store.state.translations["main.contact-us"] }}
         </button>
       </div>
     </div>

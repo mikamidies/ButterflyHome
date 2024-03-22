@@ -1,53 +1,33 @@
 <template>
   <div class="wrap">
     <div class="container small">
-      <h4 class="title">Butterfly Home Мы - то, что нужно каждому семью</h4>
+      <h4 class="title">{{ $store.state.translations["about.text-1"] }}</h4>
       <div class="grid">
         <div class="left">
           <p class="txt">
-            Объемы загрязняющих веществ, выбрасываемых в атмосферный воздух
-            атомными станциями, намного меньше выбросов от других отраслей
-            промышленности, включая тепловую энергетику. Количественные значения
-            выбросов загрязняющих веществ при работе АЭС находятся ниже
-            установленных природоохранными органами нормативов. Основная доля
-            выбросов АЭС приходится на пускорезервные котельные и периодически
-            включаемые с целью регламентного опробования резервные
-            дизельгенераторные станции.
+            {{ $store.state.translations["about.text-2"] }}
           </p>
           <p class="txt">
-            Объемы загрязняющих веществ, выбрасываемых в атмосферный воздух
-            атомными станциями, намного меньше выбросов от других отраслей
-            промышленности, включая тепловую энергетику. Количественные значения
-            выбросов загрязняющих веществ при работе АЭС находятся ниже
-            установленных природоохранными органами нормативов. Основная доля
-            выбросов АЭС приходится на пускорезервные котельные и периодически
-            включаемые с целью регламентного опробования резервные
-            дизельгенераторные станции.
+            {{ $store.state.translations["about.text-3"] }}
           </p>
         </div>
         <div class="right">
           <p class="opacity">
-            Наша компания с 1997 года специализируется на производстве и
-            реализации, постельного белья, матрасов, подушек, одеял и другого
-            текстиля оптом. За это время нашими партнерами стали сотни
-            предприятий и организаций по всей стране.
+            {{ $store.state.translations["about.text-4"] }}
           </p>
           <div class="nums">
             <div class="item">
-              <p class="num">2016</p>
-              <p class="sub">
-                dan beri ish olib <br />
-                boramiz
-              </p>
+              <p class="num">{{ $store.state.translations["about.text-5"] }}</p>
+              <p class="sub">{{ $store.state.translations["about.text-6"] }}</p>
             </div>
             <div class="item">
-              <p class="num">+4800</p>
-              <p class="sub">dan ortiq sotuvlar</p>
+              <p class="num">{{ $store.state.translations["about.text-7"] }}</p>
+              <p class="sub">{{ $store.state.translations["about.text-8"] }}</p>
             </div>
           </div>
           <NuxtLink :to="localePath('/products')">
             <ShopperIcon />
-            Каталог продукций
+            {{ $store.state.translations["main.catalog"] }}
           </NuxtLink>
         </div>
       </div>
@@ -56,19 +36,19 @@
           <div class="img">
             <img src="@/assets/img/logo/card-1.svg" alt="" class="icon" />
           </div>
-          <p class="name">Tezkor yetkazib berish</p>
+          <p class="name">{{ $store.state.translations["about.text-9"] }}</p>
         </div>
         <div class="cardo">
           <div class="img">
             <img src="@/assets/img/logo/card-2.svg" alt="" class="icon" />
           </div>
-          <p class="name">Sifat va ishonchlik</p>
+          <p class="name">{{ $store.state.translations["about.text-10"] }}</p>
         </div>
         <div class="cardo">
           <div class="img">
             <img src="@/assets/img/logo/card-3.svg" alt="" class="icon" />
           </div>
-          <p class="name">Barcha mijozlarimiz roziligi</p>
+          <p class="name">{{ $store.state.translations["about.text-11"] }}</p>
         </div>
       </div>
     </div>

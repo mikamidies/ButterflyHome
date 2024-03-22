@@ -1,9 +1,11 @@
 <template>
   <div class="master">
-    <SiteTop />
+    <SiteTop :current="$store.state.translations['main.layout-2']" />
 
     <div class="container categories">
-      <h4 class="section__title title">Каталог товаров</h4>
+      <h4 class="section__title title">
+        {{ $store.state.translations["main.catalog"] }}
+      </h4>
       <div class="items">
         <div class="item" v-for="category in categories" :key="category.id">
           <div
@@ -21,7 +23,9 @@
 
     <div class="container products">
       <div class="header">
-        <h4 class="section__title">Наша продукция</h4>
+        <h4 class="section__title">
+          {{ $store.state.translations["inner.products"] }}
+        </h4>
         <!-- <div class="cats">
           <button class="cat" v-for="cat in categories" :key="cat.id">
             {{ cat.title }}

@@ -6,14 +6,16 @@
         <div class="content">
           <ol class="crumbs">
             <li>
-              <NuxtLink :to="localePath('/')"> Home </NuxtLink>
+              <NuxtLink :to="localePath('/')">
+                {{ $store.state.translations["main.layout-1"] }}
+              </NuxtLink>
             </li>
             \
             <li>
-              <p>Продукты</p>
+              <p>{{ current }}</p>
             </li>
           </ol>
-          <h1 class="title">Продукты</h1>
+          <h1 class="title">{{ current }}</h1>
         </div>
       </div>
     </div>
@@ -21,7 +23,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["current"],
+};
 </script>
 
 <style scoped>

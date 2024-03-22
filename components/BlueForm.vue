@@ -11,10 +11,11 @@
           <img src="@/assets/img/mobile-blue.png" alt="" />
         </div>
         <div class="left">
-          <h4 class="title">Связаться с нами</h4>
+          <h4 class="title">
+            {{ $store.state.translations["main.contact-us"] }}
+          </h4>
           <p class="sub">
-            Подпишитесь и читайте интересное о продуктах, экологии, здоровом
-            образе жизни
+            {{ $store.state.translations["main.contacts-2"] }}
           </p>
           <div class="flex">
             <div class="num">
@@ -34,11 +35,16 @@
         <div class="right">
           <form @submit.prevent="onSubmit">
             <div class="inputs">
-              <input type="text" v-model="name" placeholder="Name" required />
+              <input
+                type="text"
+                v-model="name"
+                :placeholder="$store.state.translations[`main.contacts-3`]"
+                required
+              />
               <input
                 type="number"
                 v-model="number"
-                placeholder="Number"
+                :placeholder="$store.state.translations[`main.contacts-4`]"
                 required
               />
             </div>

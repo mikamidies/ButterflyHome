@@ -1,6 +1,6 @@
 <template>
   <div class="master">
-    <SiteTop />
+    <SiteTop :current="$store.state.translations['main.layout-4']" />
     <HomeAbout />
     <AboutCards />
     <AboutContent />

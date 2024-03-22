@@ -1,6 +1,6 @@
 <template>
   <div class="master">
-    <SiteTop />
+    <SiteTop :current="$store.state.translations['main.layout-2']" />
     <ProductFace :product="product" />
     <ProductDesc :product="product" />
     <!-- <ProductSimilar /> -->

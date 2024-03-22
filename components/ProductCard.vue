@@ -7,10 +7,12 @@
       <div class="content">
         <p class="name">{{ item.title }}</p>
         <div class="size">
-          <span>Размеры :</span>
+          <span>{{ $store.state.translations["inner.sizes"] }}</span>
           <p>{{ item.size }}</p>
         </div>
-        <div class="link">Просмотреть <RightArrow /></div>
+        <div class="link">
+          {{ $store.state.translations["inner.see"] }} <RightArrow />
+        </div>
       </div>
     </NuxtLink>
   </div>

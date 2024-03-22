@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="container">
       <div class="desc">
-        <h4 class="title">Описание</h4>
+        <h4 class="title">{{ $store.state.translations["inner.desc"] }}</h4>
         <div class="html" v-html="product.desc"></div>
       </div>
     </div>

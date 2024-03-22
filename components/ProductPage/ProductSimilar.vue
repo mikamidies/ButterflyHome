@@ -2,7 +2,9 @@
   <div class="wrap">
     <div class="container">
       <div class="header">
-        <h4 class="section__title">Другие продукции</h4>
+        <h4 class="section__title">
+          {{ $store.state.translations["inner.similar"] }}
+        </h4>
         <div class="buttons">
           <button class="prev">
             <ChevronDown />

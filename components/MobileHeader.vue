@@ -25,16 +25,24 @@
         <div class="top">
           <ul class="links">
             <li>
-              <NuxtLink :to="localePath('/')"> Главная </NuxtLink>
+              <NuxtLink :to="localePath('/')">
+                {{ $store.state.translations["main.layout-1"] }}
+              </NuxtLink>
             </li>
             <li>
-              <NuxtLink :to="localePath('/products')"> Продукты </NuxtLink>
+              <NuxtLink :to="localePath('/products')">
+                {{ $store.state.translations["main.layout-2"] }}
+              </NuxtLink>
             </li>
             <li>
-              <NuxtLink :to="localePath('/about')"> О нас </NuxtLink>
+              <NuxtLink :to="localePath('/about')">
+                {{ $store.state.translations["main.layout-4"] }}</NuxtLink
+              >
             </li>
             <li>
-              <NuxtLink :to="localePath('/contacts')"> Контакты </NuxtLink>
+              <NuxtLink :to="localePath('/contacts')">
+                {{ $store.state.translations["main.layout-5"] }}
+              </NuxtLink>
             </li>
           </ul>
         </div>

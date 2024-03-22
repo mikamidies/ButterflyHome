@@ -16,30 +16,40 @@
             <div class="buttons">
               <NuxtLink class="white" :to="localePath('/products')">
                 <ShooperIcon />
-                Каталог продукций
+                {{ $store.state.translations["main.catalog"] }}
               </NuxtLink>
               <button class="green" @click="scrollElement('anchor')">
                 <PhoneIcon />
-                Связаться с нами
+                {{ $store.state.translations["main.contact-us"] }}
               </button>
             </div>
           </div>
           <div class="right">
             <ul class="links">
               <li>
-                <NuxtLink :to="localePath('/')"> Главная </NuxtLink>
+                <NuxtLink :to="localePath('/')">
+                  {{ $store.state.translations["main.layout-1"] }}
+                </NuxtLink>
               </li>
               <li>
-                <NuxtLink :to="localePath('/products')"> Продукты </NuxtLink>
+                <NuxtLink :to="localePath('/products')">
+                  {{ $store.state.translations["main.layout-2"] }}
+                </NuxtLink>
+              </li>
+              <!-- <li>
+                <NuxtLink :to="localePath('/services')">
+                  {{ $store.state.translations["main.layout-3"] }}
+                </NuxtLink>
+              </li> -->
+              <li>
+                <NuxtLink :to="localePath('/about')">
+                  {{ $store.state.translations["main.layout-4"] }}
+                </NuxtLink>
               </li>
               <li>
-                <NuxtLink :to="localePath('/services')"> Услуги </NuxtLink>
-              </li>
-              <li>
-                <NuxtLink :to="localePath('/about')"> О нас </NuxtLink>
-              </li>
-              <li>
-                <NuxtLink :to="localePath('/contacts')"> Контакты </NuxtLink>
+                <NuxtLink :to="localePath('/contacts')">
+                  {{ $store.state.translations["main.layout-5"] }}
+                </NuxtLink>
               </li>
             </ul>
 
@@ -55,7 +65,7 @@
         </div>
 
         <div class="bottom">
-          <p>Copyright © 2024 Butterfly Home Collection</p>
+          <p>{{ $store.state.translations["main.copy"] }}</p>
 
           <p class="by">
             by <a href="https://ndc.uz/" target="_blank"> NDC </a>

@@ -1,7 +1,9 @@
 <template>
   <div class="wrap">
     <div class="container">
-      <h4 class="section__title">Наша продукция</h4>
+      <h4 class="section__title">
+        {{ $store.state.translations["main.products"] }}
+      </h4>
       <div class="cats">
         <button class="cat" v-for="cat in categories" :key="cat.id">
           {{ cat.title }}
