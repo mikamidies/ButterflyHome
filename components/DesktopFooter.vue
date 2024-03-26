@@ -6,7 +6,7 @@
           <div class="left">
             <div class="brand">
               <NuxtLink :to="localePath('/')">
-                <img src="@/assets/img/logo/brand.svg" alt="" />
+                <img src="@/assets/img/logo/brand.png" alt="" />
               </NuxtLink>
             </div>
             <div class="num">

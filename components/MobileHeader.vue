@@ -3,7 +3,7 @@
     <div class="container">
       <div class="left">
         <NuxtLink :to="localePath('/')" class="brand">
-          <img src="@/assets/img/logo/brand.svg" alt="" />
+          <img src="@/assets/img/logo/brand.png" alt="" />
         </NuxtLink>
       </div>
       <div class="right">
@@ -121,6 +121,10 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
+.brand {
+  display: flex;
+}
+
 .brand img {
   width: 90px;
   height: auto;
