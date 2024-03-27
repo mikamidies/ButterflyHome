@@ -1,28 +1,28 @@
 <template>
   <div class="wrap">
     <div class="container small">
-      <h4 class="title">{{ $store.state.translations["about.text-1"] }}</h4>
+      <h4 class="title">{{ $store.state.translations["about.txt-1"] }}</h4>
       <div class="grid">
         <div class="left">
           <p class="txt">
-            {{ $store.state.translations["about.text-2"] }}
+            {{ $store.state.translations["about.txt-2"] }}
           </p>
           <p class="txt">
-            {{ $store.state.translations["about.text-3"] }}
+            {{ $store.state.translations["about.txt-3"] }}
           </p>
         </div>
         <div class="right">
           <p class="opacity">
-            {{ $store.state.translations["about.text-4"] }}
+            {{ $store.state.translations["about.txt-4"] }}
           </p>
           <div class="nums">
             <div class="item">
-              <p class="num">{{ $store.state.translations["about.text-5"] }}</p>
-              <p class="sub">{{ $store.state.translations["about.text-6"] }}</p>
+              <p class="num">{{ $store.state.translations["about.txt-5"] }}</p>
+              <p class="sub">{{ $store.state.translations["about.txt-6"] }}</p>
             </div>
             <div class="item">
-              <p class="num">{{ $store.state.translations["about.text-7"] }}</p>
-              <p class="sub">{{ $store.state.translations["about.text-8"] }}</p>
+              <p class="num">{{ $store.state.translations["about.txt-7"] }}</p>
+              <p class="sub">{{ $store.state.translations["about.txt-8"] }}</p>
             </div>
           </div>
           <NuxtLink :to="localePath('/products')">
@@ -36,19 +36,19 @@
           <div class="img">
             <img src="@/assets/img/logo/card-1.svg" alt="" class="icon" />
           </div>
-          <p class="name">{{ $store.state.translations["about.text-9"] }}</p>
+          <p class="name">{{ $store.state.translations["about.txt-9"] }}</p>
         </div>
         <div class="cardo">
           <div class="img">
             <img src="@/assets/img/logo/card-2.svg" alt="" class="icon" />
           </div>
-          <p class="name">{{ $store.state.translations["about.text-10"] }}</p>
+          <p class="name">{{ $store.state.translations["about.txt-10"] }}</p>
         </div>
         <div class="cardo">
           <div class="img">
             <img src="@/assets/img/logo/card-3.svg" alt="" class="icon" />
           </div>
-          <p class="name">{{ $store.state.translations["about.text-11"] }}</p>
+          <p class="name">{{ $store.state.translations["about.txt-11"] }}</p>
         </div>
       </div>
     </div>

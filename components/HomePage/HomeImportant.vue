@@ -81,7 +81,6 @@ export default {};
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 36px */
-  margin-bottom: 8px;
 }
 .sub {
   color: var(--grey-80, #353437);
@@ -89,6 +88,7 @@ export default {};
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 27px */
+  display: none;
 }
 .item:nth-child(2) {
   margin-left: 72px;
