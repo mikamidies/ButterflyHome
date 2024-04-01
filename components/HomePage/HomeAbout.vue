@@ -10,7 +10,9 @@
             </h4>
             <div class="items">
               <div class="item">
-                <p>{{ $store.state.translations["main.about-2"] }}</p>
+                <p>
+                  {{ date }}
+                </p>
                 <p>{{ $store.state.translations["main.about-3"] }}</p>
               </div>
               <div class="item">
@@ -37,8 +39,18 @@
 import UprightArrow from "@/components/SvgIcons/UprightArrow.vue";
 
 export default {
+  data() {
+    return {
+      date: "",
+    };
+  },
+
   components: {
     UprightArrow,
+  },
+
+  mounted() {
+    this.date = new Date().getFullYear() - 2017;
   },
 };
 </script>

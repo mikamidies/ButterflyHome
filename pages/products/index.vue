@@ -24,7 +24,7 @@
     <div class="container products">
       <div class="header">
         <h4 class="section__title">
-          {{ $store.state.translations["inner.products"] }}
+          {{ $store.state.translations["main.products"] }}
         </h4>
         <!-- <div class="cats">
           <button class="cat" v-for="cat in categories" :key="cat.id">

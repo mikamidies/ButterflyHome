@@ -9,10 +9,12 @@
       </p>
       <div class="items">
         <div class="item" v-for="item in categories" :key="item.id">
-          <div class="img">
-            <img :src="item.image" alt="" />
-          </div>
-          <p class="name">{{ item.title }}</p>
+          <NuxtLink :to="localePath(`/products?category=${item.id}`)">
+            <div class="img">
+              <img :src="item.image" alt="" />
+            </div>
+            <p class="name">{{ item.title }}</p>
+          </NuxtLink>
         </div>
       </div>
     </div>

@@ -5,9 +5,14 @@
         {{ $store.state.translations["main.products"] }}
       </h4>
       <div class="cats">
-        <button class="cat" v-for="cat in categories" :key="cat.id">
+        <NuxtLink
+          :to="localePath(`/products?category=${cat.id}`)"
+          class="cat"
+          v-for="cat in categories"
+          :key="cat.id"
+        >
           {{ cat.title }}
-        </button>
+        </NuxtLink>
       </div>
       <div class="items">
         <ProductCard v-for="item in products" :key="item.id" :item="item" />
