@@ -82,8 +82,10 @@ export default {
   font-style: normal;
   font-weight: 500;
   line-height: 150%; /* 24px */
+  white-space: nowrap;
 }
 .size p {
+  word-break: break-all;
   color: var(--Black, #020105);
   font-size: 16px;
   font-style: normal;
