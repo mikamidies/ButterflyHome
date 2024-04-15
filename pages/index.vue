@@ -4,6 +4,7 @@
     <HomeAbout />
     <HomeOffer :categories="categories" />
     <HomeImportant />
+    <HomeStories />
     <BlueForm />
     <HomeProducts :products="products" :categories="categories" />
   </div>

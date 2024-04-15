@@ -28,7 +28,7 @@
           </div>
         </div>
         <div class="right">
-          <img src="@/assets/img/about.jpg" alt="" />
+          <video autoplay muted playsinline loop src="/video.MOV"></video>
         </div>
       </div>
     </div>
@@ -122,7 +122,7 @@ export default {
   border-radius: 32px;
   overflow: hidden;
 }
-.right img {
+.right video {
   width: 100%;
   height: 100%;
   object-fit: cover;
