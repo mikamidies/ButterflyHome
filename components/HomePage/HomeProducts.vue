@@ -5,14 +5,22 @@
         {{ $store.state.translations["main.products"] }}
       </h4>
       <div class="cats">
-        <NuxtLink
-          :to="localePath(`/products?category=${cat.id}`)"
+        <button
+          class="cat"
+          @click="deleteCat()"
+          :class="{ disabled: Object.keys($route.query).length == 0 }"
+        >
+          {{ $store.state.translations["main.all"] }}
+        </button>
+        <button
           class="cat"
           v-for="cat in categories"
           :key="cat.id"
+          @click="sortCategory(cat.id)"
+          :class="{ disabled: $route.query.category == cat.id }"
         >
           {{ cat.title }}
-        </NuxtLink>
+        </button>
       </div>
       <div class="items">
         <ProductCard v-for="item in products" :key="item.id" :item="item" />
@@ -23,13 +31,69 @@
 
 <script>
 import ProductCard from "../ProductCard.vue";
+import productsApi from "@/api/products";
 
 export default {
   components: {
     ProductCard,
   },
 
-  props: ["products", "categories"],
+  data() {
+    return {
+      products: [],
+    };
+  },
+
+  props: ["categories"],
+
+  async fetch() {
+    const productsData = await productsApi.getProducts(this.$axios, {
+      params: this.$route.query,
+      headers: {
+        language: this.$i18n.locale,
+      },
+    });
+
+    this.products = productsData;
+  },
+
+  methods: {
+    async sortCategory(value) {
+      let query = { ...this.$route.query };
+      query.category = value;
+      if (!Object.keys(this.$route.query).includes(`${value}`)) {
+        await this.$router.replace(
+          this.localePath({
+            path: this.$route.path,
+            query: query,
+          })
+        );
+      }
+
+      this.changeProducts();
+    },
+
+    async deleteCat() {
+      await this.$router.replace(
+        this.localePath({
+          path: `/`,
+        })
+      );
+
+      this.changeProducts();
+    },
+
+    async changeProducts() {
+      const productsData = await productsApi.getProducts(this.$axios, {
+        params: this.$route.query,
+        headers: {
+          language: this.$i18n.locale,
+        },
+      });
+
+      this.products = productsData;
+    },
+  },
 };
 </script>
 
@@ -54,6 +118,11 @@ export default {
   border-radius: 70px;
   background: #f4f4f7;
   backdrop-filter: blur(12px);
+}
+.cat.disabled {
+  pointer-events: none;
+  background: #009a10;
+  color: white;
 }
 .items {
   display: grid;

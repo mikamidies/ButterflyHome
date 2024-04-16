@@ -28,7 +28,15 @@
           </div>
         </div>
         <div class="right">
-          <video autoplay muted playsinline loop src="/video.MOV"></video>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/8fGYZJi8ldw?autoplay=1&mute=1&controls=0&loop=1&rel=0&playlist=8fGYZJi8ldw"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </div>
@@ -122,10 +130,12 @@ export default {
   border-radius: 32px;
   overflow: hidden;
 }
-.right video {
+.right iframe {
+  pointer-events: none;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1.8);
 }
 @media screen and (max-width: 1024px) {
   .wrap {

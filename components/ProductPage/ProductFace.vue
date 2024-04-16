@@ -37,14 +37,19 @@
           </h4>
 
           <div class="specs">
-            <h4>Как ухаживать</h4>
+            <div class="size">
+              <h4>{{ $store.state.translations["inner.sizes"] }}</h4>
+              <p>{{ product.size }}</p>
+            </div>
+
+            <h4>{{ $store.state.translations["inner.desc"] }}</h4>
 
             <div v-html="product.short_desc" class="html"></div>
           </div>
 
           <button @click="scrollElement('anchor')">
             <PhoneIcon />
-            Связаться с нами
+            {{ $store.state.translations["main.contact-us"] }}
           </button>
         </div>
       </div>
@@ -193,6 +198,15 @@ button {
 }
 :deep(.swiper-slide-thumb-active) {
   border: 2px solid #009a10;
+}
+.size {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.size h4 {
+  margin: 0;
 }
 @media screen and (max-width: 1024px) {
   .left {
