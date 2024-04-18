@@ -59,15 +59,25 @@
       </div>
 
       <div class="iframe">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5989.768431077782!2d69.21937832064897!3d41.354870316336054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c428de7d5d3%3A0x126b83530bb25f52!2z0J7Qu9C80LDQt9C-0YA!5e0!3m2!1sru!2s!4v1710920871628!5m2!1sru!2s"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div style="position: relative; overflow: hidden">
+          <a
+            href="https://yandex.uz/maps/105813/tashkent-province/?utm_medium=mapframe&utm_source=maps"
+            style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+            >Ташкентская область</a
+          ><a
+            href="https://yandex.uz/maps/105813/tashkent-province/house/YkAYdwBkTE0HQFprfX5weH9gYg==/?ll=69.174507%2C41.218399&utm_medium=mapframe&utm_source=maps&z=16.89"
+            style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+            >Улица Амира Тимура, 2 на карте Ташкентской области — Яндекс
+            Карты</a
+          ><iframe
+            src="https://yandex.uz/map-widget/v1/?ll=69.174507%2C41.218399&mode=whatshere&whatshere%5Bpoint%5D=69.174580%2C41.219336&whatshere%5Bzoom%5D=17&z=16.89"
+            width="560"
+            height="400"
+            frameborder="1"
+            allowfullscreen="true"
+            style="position: relative"
+          ></iframe>
+        </div>
       </div>
     </div>
 
